@@ -1,0 +1,4 @@
+services:
+#    gs.example:
+#        class: GsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

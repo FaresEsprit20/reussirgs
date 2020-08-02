@@ -1,0 +1,23 @@
+gs_homepage:
+    path:     /home
+    defaults: { _controller: GsBundle:Default:index }
+
+additiontrou:
+    path:     /additionpartrou
+    defaults: { _controller: GsBundle:Default:additionParTrou }
+
+comparertrois:
+    path:     /comparertrois
+    defaults: { _controller: GsBundle:Default:comparerpartrois }
+
+moinsplus:
+    path:     /moinsplus
+    defaults: { _controller: GsBundle:Default:moinsplus }
+
+soustraction:
+    path:     /soustraction
+    defaults: { _controller: GsBundle:Default:soustraction }
+
+compterdeux:
+    path:     /compterdeux
+    defaults: { _controller: GsBundle:Default:compterdeux }

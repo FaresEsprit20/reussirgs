@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  _ Moins ou Plus
+{% endblock %}
+
+{% block main %}
+<style>
+        .selectedd{
+border:2px inset silver;
+        }
+.small {
+    width: 92px !important;
+}
+
+.btn-lg{
+  width: 32px !important;
+}
+.inline-block{
+width: 100px;
+height: 100px;
+
+}
+
+</style>
+
+{% endblock %}
+
+{% block body %}
+  <!-- Tips Triks Start -->
+  <div class="tips-triks-area tips-padding">
+    <div class="container">
+      <!-- Section-tittle -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 pr-0">
+          <div class="section-tittle text-center">
+            <h5>
+              Moins ou Plus
+            </h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    <div class="d-inline-flex mb-3">
+    <p class="sample-text ">Y a-t-il plus de pinceaux que de gobelets à peinture ?<p>
+    </div>
+    <br>
+      <div  class="banner">
+       <div class="inline-block" style="display: inline-block;">
+    <img  src ="{{ asset('assets/images/paintbrush.svg')}}">
+     </div>
+     <div class="inline-block" style="display: inline-block;">
+    <img src ="{{ asset('assets/images/paintbrush.svg')}}">
+</div>
+    </div>
+<br>
+
+      <div  class="banner">
+      <div class="inline-block" style="display: inline-block;">
+   <img   src ="{{ asset('assets/images/paintcup.svg')}}">
+      </div>
+      <div class="inline-block" style="display: inline-block;">
+   <img   src ="{{ asset('assets/images/paintcup.svg')}}">
+      </div>
+</div>
+<br>
+    <br>
+      <div id="banner" class="banner">
+    <button id="btn1" type="button" class="btn btn-lg  img" >Oui</button>
+    <button id="btn2" type="button" class="btn btn-lg   img" >Non</button>
+</div>
+<br>
+<div class="d-inline-flex mb-3">
+       <div class="span2">
+	<p ><button id="valider"  class="genric-btn primary small ">valider</button></p>
+  </div>
+    </div>
+  </div>
+  <div id="response">
+   <div id="html"></div>         
+       <div class="block text-center"><button id="ok"  hidden="true" class="genric-btn primary ">ok</button></div>
+  </div>
+ 
+  <!-- Tips Triks End -->
+  <script>
+    jQuery( document ).ready(function( $ ) {
+      //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
+        $("#valider").click(function () {
+         
+          if(!$('.img').hasClass('selectedd')){
+            alert("vide! choisir une option");
+          }else{
+            if($('.selectedd').index() == 1){ 
+           $("#html").html('<div class="section-tittle text-center success"><h2 style="color:green">Bravo!</h2>	');
+         document.getElementById('response').scrollIntoView();
+            }else{
+              $("#html").html('<div class="section-tittle text-center danger"><h2 style="color:red">Echec! la bonne réponse est Non </h2>	');
+            document.getElementById('response').scrollIntoView();
+            }       
+             $("input").prop("disabled",true);
+             $(this).prop("disabled",true);
+             $("#ok").attr("hidden",false);
+          }
+          $('#annuler').prop('disabled','true');
+        });
+    
+ $("#ok").click(function () {
+          $("#response").text("");
+        });
+    });
+
+
+$(function(){
+  var ff;    
+    //pour  selectionner les images et implémenter le compteur
+   $('.img').on('click', function(evt) {
+        ff = $(this);
+        evt.stopPropagation();
+        $('.img').removeClass('selectedd');
+        ff.addClass('selectedd');
+    });      
+});
+ 
+</script>
+
+
+{% endblock %}
+
+
+

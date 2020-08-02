@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  _ Comparer 3 nombres
+{% endblock %}
+
+{% block main %}
+<style>
+        .selectedd{
+border:2px inset silver;
+        }
+.small {
+    width: 92px !important;
+}
+
+.btn-lg{
+background-color: #e8f9fd;  
+color: black;
+font-size: 52px;
+}
+
+</style>
+
+{% endblock %}
+
+{% block body %}
+  <!-- Tips Triks Start -->
+  <div class="tips-triks-area tips-padding">
+    <div class="container">
+      <!-- Section-tittle -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 pr-0">
+          <div class="section-tittle text-center">
+            <h5>
+              Comparer 3 nombres
+            </h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    <div class="d-inline-flex mb-3">
+    <p class="sample-text ">Quel est le plus grand nombre ?<p>
+    </div>
+    <br>
+      <div id="banner" class="banner">
+    <button id="btn1" type="button" class="btn btn-lg  img" >3</button>
+    <button id="btn2" type="button" class="btn btn-lg  img" >7</button>
+    <button id="btn3" type="button" class="btn btn-lg  img" >5</button>
+</div>
+<br>
+<div class="d-inline-flex mb-3">
+       <div class="span2">
+	<p ><button id="valider"  class="genric-btn primary small ">valider</button></p>
+  </div>
+    </div>
+  </div>
+  <div id="response">
+   <div id="html"></div>         
+       <div class="block text-center"><button id="ok"  hidden="true" class="genric-btn primary ">ok</button></div>
+  </div>
+ 
+  <!-- Tips Triks End -->
+  <script>
+    jQuery( document ).ready(function( $ ) {
+      //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
+        $("#valider").click(function () {
+         
+          if(!$('.img').hasClass('selectedd')){
+            alert("vide! choisir une option");
+          }else{
+            if($('.selectedd').index() == 1){ 
+           $("#html").html('<div class="section-tittle text-center success"><h2 style="color:green">Bravo!</h2>	');
+         document.getElementById('response').scrollIntoView();
+            }else{
+              $("#html").html('<div class="section-tittle text-center danger"><h2 style="color:red">Echec! la bonne réponse est 7 </h2>	');
+            document.getElementById('response').scrollIntoView();
+            }       
+             $("input").prop("disabled",true);
+             $(this).prop("disabled",true);
+             $("#ok").attr("hidden",false);
+          }
+          $('#annuler').prop('disabled','true');
+        });
+    
+ $("#ok").click(function () {
+          $("#response").text("");
+        });
+    });
+
+
+$(function(){
+  var ff;    
+    //pour  selectionner les images et implémenter le compteur
+   $('.img').on('click', function(evt) {
+        ff = $(this);
+        evt.stopPropagation();
+        $('.img').removeClass('selectedd');
+        ff.addClass('selectedd');
+    });      
+});
+ 
+</script>
+
+
+{% endblock %}
+
+
+
