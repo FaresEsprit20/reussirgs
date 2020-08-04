@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  _ Lire thermomètre
+{% endblock %}
+
+{% block main %}
+<style>
+        .selectedd{
+border:2px inset silver;
+        }
+.small {
+    width: 92px !important;
+}
+
+.btn-lg{
+  width: 32px !important;
+}
+.inline-block{
+width: 100px;
+height: 100px;
+
+}
+
+</style>
+
+{% endblock %}
+
+{% block body %}
+  <!-- Tips Triks Start -->
+  <div class="tips-triks-area tips-padding">
+    <div class="container">
+      <!-- Section-tittle -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 pr-0">
+          <div class="section-tittle text-center">
+            <h5>
+              Lire thermomètre
+            </h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    <div class="d-inline-flex mb-3">
+    <p class="sample-text ">Quelle est la température en °C ?<p>
+    </div>
+    <br>
+      <div  class="banner">
+       <div class="block">
+    <img  src ="{{ asset('assets/images/therm.png') }}">
+     </div>
+    </div>
+<br>
+
+      
+    <br>
+      <div id="banner" class="banner">
+    <button id="btn1" type="button" class="btn btn-lg  img" >25°C</button>
+    <button id="btn2" type="button" class="btn btn-lg  img" >5°C</button>
+    <button id="btn3" type="button" class="btn btn-lg  img" >17°C</button>
+    <button id="btn4" type="button" class="btn btn-lg  img" >35°C</button>
+</div>
+<br>
+<div class="d-inline-flex mb-3">
+       <div class="span2">
+	<p ><button id="valider"  class="genric-btn primary small ">valider</button></p>
+  </div>
+    </div>
+  </div>
+  <div id="response">
+   <div id="html"></div>         
+       <div class="block text-center"><button id="ok"  hidden="true" class="genric-btn primary ">ok</button></div>
+  </div>
+ 
+  <!-- Tips Triks End -->
+  <script>
+    jQuery( document ).ready(function( $ ) {
+      //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
+        $("#valider").click(function () {
+         
+          if(!$('.img').hasClass('selectedd')){
+            alert("vide! choisir une option");
+          }else{
+            if($('.selectedd').index() == 3){ 
+           $("#html").html('<div class="section-tittle text-center success"><h2 style="color:green">Bravo!</h2>	');
+         document.getElementById('response').scrollIntoView();
+            }else{
+              $("#html").html('<div class="section-tittle text-center danger"><h2 style="color:red">Echec! la bonne réponse est 35°C </h2>	');
+            document.getElementById('response').scrollIntoView();
+            }       
+             $("input").prop("disabled",true);
+             $(this).prop("disabled",true);
+             $("#ok").attr("hidden",false);
+          }
+          $('#annuler').prop('disabled','true');
+        });
+    
+ $("#ok").click(function () {
+          $("#response").text("");
+        });
+    });
+
+
+$(function(){
+  var ff;    
+    //pour  selectionner les images et implémenter le compteur
+   $('.img').on('click', function(evt) {
+        ff = $(this);
+        evt.stopPropagation();
+        $('.img').removeClass('selectedd');
+        ff.addClass('selectedd');
+    });      
+});
+ 
+</script>
+
+
+{% endblock %}
+
+
+

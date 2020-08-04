@@ -21,3 +21,19 @@ soustraction:
 compterdeux:
     path:     /compterdeux
     defaults: { _controller: GsBundle:Default:compterdeux }
+
+jourssemaines:
+    path:     /jourssemaines
+    defaults: { _controller: GsBundle:Default:jourssemaines }
+
+moisannees:
+    path:     /moisannees
+    defaults: { _controller: GsBundle:Default:moisannees }
+
+liretemperature:
+    path:     /liretemperature
+    defaults: { _controller: GsBundle:Default:liretemperature }
+
+comparerlongueurs:
+    path:     /comparerlongueurs
+    defaults: { _controller: GsBundle:Default:comparerlongueurs }

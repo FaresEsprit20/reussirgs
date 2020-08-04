@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  _ Mois par année
+{% endblock %}
+{% block main %}
+
+{% endblock %}
+
+{% block body %}
+  <!-- Tips Triks Start -->
+  <div class="tips-triks-area tips-padding">
+    <div class="container">
+      <!-- Section-tittle -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 pr-0">
+          <div class="section-tittle text-center">
+            <h5>
+              Nombre de Mois par année
+            </h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+
+    <div class="d-inline-flex mb-3">
+    <p class="sample-text ">Quel est le nombre de mois par année ?<p>
+    </div>
+    <br>
+      
+                 <div class="d-inline-flex mb-3">
+                  <div class="col-sm-4">
+								<input type="text" id ="lnum"   name="lnum" class="single-input-primary">
+                  	</div>
+                  <label style="display=inline-block;text-align=right;" for="lnum">Mois</label>
+					      
+       </div>
+  <div class="block">	<button id="valider"  class="genric-btn primary small">valider</button></div>
+    </div>
+  </div>
+  <div id="response">
+   <div id="html"></div>
+     
+         
+       <div class="block text-center"><button id="ok"  hidden="true" class="genric-btn primary ">ok</button></div>
+  </div>
+ 
+  <!-- Tips Triks End -->
+  <script>
+    jQuery( document ).ready(function( $ ) {
+        $("#valider").click(function () {
+          if($("#lnum").val().length ==0){
+            alert("Empty!");
+          }else{
+            if($("#lnum").val() == 12){
+           $("#html").html('<div class="section-tittle text-center"><h2 style="color:green">Bravo!</h2>	'
+          );
+            }else{
+              $("#html").html('<div class="section-tittle text-center"><h2 style="color:red">Echec! la bonne réponse est 12</h2>	');
+            }
+           
+             $("input").prop("disabled",true);
+              $(this).prop("disabled",true);
+               $("#ok").attr("hidden",false);
+          }
+        });
+
+ $("#ok").click(function () {
+          $("#response").text("");
+        });
+
+    });
+ 
+ 
+</script>
+
+
+{% endblock %}
+
+
+

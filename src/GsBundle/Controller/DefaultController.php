@@ -38,6 +38,28 @@ class DefaultController extends Controller
         return $this->render('@Gs/Default/compterdeux.html.twig');
     }
 
+    public function comparerlongueursAction()
+    {
+        return $this->render('@Gs/Default/grandeurs/comparerlongueurs.html.twig');
+    }
+
+    public function jourssemainesAction()
+    {
+        return $this->render('@Gs/Default/grandeurs/nbjours.html.twig');
+    }
+
+    public function moisanneesAction()
+    {
+        return $this->render('@Gs/Default/grandeurs/moisannee.html.twig');
+    }
+
+    public function liretemperatureAction()
+    {
+        return $this->render('@Gs/Default/grandeurs/liretemperature.html.twig');
+    }
+
+  
+
 }
 
 

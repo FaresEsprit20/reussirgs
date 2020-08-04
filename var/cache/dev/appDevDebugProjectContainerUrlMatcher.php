@@ -117,14 +117,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::additionParTrouAction',  '_route' => 'additiontrou',);
         }
 
-        // comparertrois
-        if ('/comparertrois' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::comparerpartroisAction',  '_route' => 'comparertrois',);
-        }
+        if (0 === strpos($pathinfo, '/comp')) {
+            // comparertrois
+            if ('/comparertrois' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::comparerpartroisAction',  '_route' => 'comparertrois',);
+            }
 
-        // compterdeux
-        if ('/compterdeux' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::compterdeuxAction',  '_route' => 'compterdeux',);
+            // comparerlongueurs
+            if ('/comparerlongueurs' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::comparerlongueursAction',  '_route' => 'comparerlongueurs',);
+            }
+
+            // compterdeux
+            if ('/compterdeux' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::compterdeuxAction',  '_route' => 'compterdeux',);
+            }
+
         }
 
         // moinsplus
@@ -132,9 +140,24 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moinsplusAction',  '_route' => 'moinsplus',);
         }
 
+        // moisannees
+        if ('/moisannees' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moisanneesAction',  '_route' => 'moisannees',);
+        }
+
         // soustraction
         if ('/soustraction' === $pathinfo) {
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::soustractionAction',  '_route' => 'soustraction',);
+        }
+
+        // jourssemaines
+        if ('/jourssemaines' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::jourssemainesAction',  '_route' => 'jourssemaines',);
+        }
+
+        // liretemperature
+        if ('/liretemperature' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::liretemperatureAction',  '_route' => 'liretemperature',);
         }
 
         // homepage
