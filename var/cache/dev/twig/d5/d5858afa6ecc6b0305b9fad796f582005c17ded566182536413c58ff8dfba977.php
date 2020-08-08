@@ -79,14 +79,14 @@ class __TwigTemplate_9c893296da7566f0a092daa109e05cd0bbe586649d13594a6f8ad2c7c7c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 7
-        echo "<style>
-        .selectedd{
+        echo "
+<style>
+.selectedd{
 border:2px inset silver;
         }
 .small {
     width: 92px !important;
 }
-
 .btn-lg{
   width: 32px !important;
 }
@@ -97,7 +97,6 @@ height: 150px;
 img:hover {
   opacity: 0.5;
 }
-
 </style>
 
 ";
@@ -109,7 +108,7 @@ img:hover {
 
     }
 
-    // line 30
+    // line 29
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -118,7 +117,7 @@ img:hover {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 31
+        // line 30
         echo "  <!-- Tips Triks Start -->
   <div class=\"tips-triks-area tips-padding\">
     <div class=\"container\">
@@ -140,16 +139,15 @@ img:hover {
       <div  class=\"banner\">
        <div class=\"inline-block\" style=\"display: inline-block;\">
     <img  class=\"img\" src =\"";
-        // line 51
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/car.png"), "html", null, true);
         echo "\">
     <img  class=\"img\" src =\"";
-        // line 52
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/longcar.png"), "html", null, true);
         echo "\">
      </div>
     </div>
-
 <br>
 <div class=\"d-inline-flex mb-3\">
        <div class=\"span2\">
@@ -163,6 +161,7 @@ img:hover {
   </div>
  
   <!-- Tips Triks End -->
+
   <script>
     jQuery( document ).ready(function( \$ ) {
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
@@ -196,7 +195,9 @@ img:hover {
         ff.addClass('selectedd');
         evt.stopPropagation();
         //alert(\"\"+ff.index());
-    });      
+        
+    });   
+    
 });
  
 </script>
@@ -223,7 +224,7 @@ img:hover {
 
     public function getDebugInfo()
     {
-        return array (  148 => 52,  144 => 51,  122 => 31,  113 => 30,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
+        return array (  147 => 51,  143 => 50,  121 => 30,  112 => 29,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -242,14 +243,14 @@ img:hover {
 {% endblock %}
 
 {% block main %}
+
 <style>
-        .selectedd{
+.selectedd{
 border:2px inset silver;
         }
 .small {
     width: 92px !important;
 }
-
 .btn-lg{
   width: 32px !important;
 }
@@ -260,7 +261,6 @@ height: 150px;
 img:hover {
   opacity: 0.5;
 }
-
 </style>
 
 {% endblock %}
@@ -290,7 +290,6 @@ img:hover {
     <img  class=\"img\" src =\"{{ asset('assets/images/longcar.png') }}\">
      </div>
     </div>
-
 <br>
 <div class=\"d-inline-flex mb-3\">
        <div class=\"span2\">
@@ -304,6 +303,7 @@ img:hover {
   </div>
  
   <!-- Tips Triks End -->
+
   <script>
     jQuery( document ).ready(function( \$ ) {
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
@@ -337,7 +337,9 @@ img:hover {
         ff.addClass('selectedd');
         evt.stopPropagation();
         //alert(\"\"+ff.index());
-    });      
+        
+    });   
+    
 });
  
 </script>

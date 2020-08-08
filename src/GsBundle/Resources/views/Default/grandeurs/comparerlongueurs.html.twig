@@ -4,14 +4,14 @@
 {% endblock %}
 
 {% block main %}
+
 <style>
-        .selectedd{
+.selectedd{
 border:2px inset silver;
         }
 .small {
     width: 92px !important;
 }
-
 .btn-lg{
   width: 32px !important;
 }
@@ -22,7 +22,6 @@ height: 150px;
 img:hover {
   opacity: 0.5;
 }
-
 </style>
 
 {% endblock %}
@@ -52,7 +51,6 @@ img:hover {
     <img  class="img" src ="{{ asset('assets/images/longcar.png') }}">
      </div>
     </div>
-
 <br>
 <div class="d-inline-flex mb-3">
        <div class="span2">
@@ -66,6 +64,7 @@ img:hover {
   </div>
  
   <!-- Tips Triks End -->
+
   <script>
     jQuery( document ).ready(function( $ ) {
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
@@ -99,7 +98,9 @@ $(function(){
         ff.addClass('selectedd');
         evt.stopPropagation();
         //alert(""+ff.index());
-    });      
+        
+    });   
+    
 });
  
 </script>

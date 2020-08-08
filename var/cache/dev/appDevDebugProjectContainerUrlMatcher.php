@@ -135,14 +135,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // moinsplus
-        if ('/moinsplus' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moinsplusAction',  '_route' => 'moinsplus',);
-        }
+        elseif (0 === strpos($pathinfo, '/m')) {
+            // moinsplus
+            if ('/moinsplus' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moinsplusAction',  '_route' => 'moinsplus',);
+            }
 
-        // moisannees
-        if ('/moisannees' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moisanneesAction',  '_route' => 'moisannees',);
+            // moisannees
+            if ('/moisannees' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moisanneesAction',  '_route' => 'moisannees',);
+            }
+
+            // mesurerlongueurs
+            if ('/mesurerlongueurs' === $pathinfo) {
+                return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::mesurerlongueursAction',  '_route' => 'mesurerlongueurs',);
+            }
+
         }
 
         // soustraction
@@ -158,6 +166,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // liretemperature
         if ('/liretemperature' === $pathinfo) {
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::liretemperatureAction',  '_route' => 'liretemperature',);
+        }
+
+        // recsolides
+        if ('/recsolides' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::recsolidesAction',  '_route' => 'recsolides',);
+        }
+
+        // planes
+        if ('/planes' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::planesAction',  '_route' => 'planes',);
         }
 
         // homepage

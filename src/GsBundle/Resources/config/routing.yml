@@ -37,3 +37,15 @@ liretemperature:
 comparerlongueurs:
     path:     /comparerlongueurs
     defaults: { _controller: GsBundle:Default:comparerlongueurs }
+
+mesurerlongueurs:
+    path:     /mesurerlongueurs
+    defaults: { _controller: GsBundle:Default:mesurerlongueurs }
+
+recsolides:
+    path:     /recsolides
+    defaults: { _controller: GsBundle:Default:recsolides }
+
+planes:
+    path:     /planes
+    defaults: { _controller: GsBundle:Default:planes }

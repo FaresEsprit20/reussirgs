@@ -58,6 +58,21 @@ class DefaultController extends Controller
         return $this->render('@Gs/Default/grandeurs/liretemperature.html.twig');
     }
 
+    public function mesurerlongueursAction()
+    {
+        return $this->render('@Gs/Default/grandeurs/mesurerregle.html.twig');
+    }
+
+    public function recsolidesAction()
+    {
+        return $this->render('@Gs/Default/espace/solides.html.twig');
+    }
+
+    public function planesAction()
+    {
+        return $this->render('@Gs/Default/espace/planes.html.twig');
+    }
+
   
 
 }
