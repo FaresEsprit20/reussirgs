@@ -11,7 +11,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Default/index.html.twig */
+/* default/index.html.twig */
 class __TwigTemplate_2311ff38e49503f13f91b08ae4c95f2fcd3cd41fa85dc5ef8038231244e22f89 extends \Twig\Template
 {
     public function __construct(Environment $env)
@@ -32,12 +32,12 @@ class __TwigTemplate_2311ff38e49503f13f91b08ae4c95f2fcd3cd41fa85dc5ef8038231244e
     protected function doDisplay(array $context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Default/index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Default/index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "Default/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -233,7 +233,7 @@ class __TwigTemplate_2311ff38e49503f13f91b08ae4c95f2fcd3cd41fa85dc5ef8038231244e
 
     public function getTemplateName()
     {
-        return "Default/index.html.twig";
+        return "default/index.html.twig";
     }
 
     public function isTraitable()
@@ -389,6 +389,6 @@ class __TwigTemplate_2311ff38e49503f13f91b08ae4c95f2fcd3cd41fa85dc5ef8038231244e
     </div>
   </div>
 {% endblock %}
-", "Default/index.html.twig", "C:\\wamp64\\www\\PFA\\app\\Resources\\views\\default\\index.html.twig");
+", "default/index.html.twig", "C:\\wamp64\\www\\PFA\\app\\Resources\\views\\default\\index.html.twig");
     }
 }

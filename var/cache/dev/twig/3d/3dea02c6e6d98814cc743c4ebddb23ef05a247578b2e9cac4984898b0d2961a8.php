@@ -149,9 +149,15 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
                                         <li><a href=\"";
         // line 63
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("gs_homepage");
-        echo "\"> Home</a></li>
-                                        <li><a href=\"#\">About Us</a></li>
-                                        <li><a href=\"#\">Contact</a></li>
+        echo "\">Home</a></li>
+                                        <li><a href=\"";
+        // line 64
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
+        echo "\">Connecter</a></li>
+                                        <li><a href=\"";
+        // line 65
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
+        echo "\">S'inscrire</a></li>
                                         
                                     </ul>
                                 </nav>
@@ -174,10 +180,8 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 ";
         // line 85
         $this->displayBlock('main', $context, $blocks);
-        // line 111
-        echo "        <!-- Slider Area End-->
- ";
         // line 112
+        echo " ";
         $this->displayBlock('body', $context, $blocks);
         // line 178
         echo "    </main>
@@ -447,7 +451,8 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
        
             </div>
         </div>
-        ";
+        <!-- Slider Area End-->
+         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -551,7 +556,7 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 
     public function getDebugInfo()
     {
-        return array (  469 => 113,  460 => 112,  440 => 101,  425 => 89,  420 => 86,  411 => 85,  394 => 7,  378 => 305,  374 => 304,  368 => 301,  364 => 300,  360 => 299,  356 => 298,  352 => 297,  346 => 294,  342 => 293,  338 => 292,  332 => 289,  328 => 288,  324 => 287,  318 => 284,  313 => 282,  309 => 281,  303 => 278,  298 => 276,  294 => 275,  290 => 274,  285 => 272,  201 => 191,  189 => 182,  183 => 178,  181 => 112,  178 => 111,  176 => 85,  151 => 63,  140 => 55,  121 => 39,  106 => 27,  102 => 26,  98 => 25,  94 => 24,  90 => 23,  86 => 22,  82 => 21,  78 => 20,  74 => 19,  70 => 18,  66 => 17,  62 => 16,  56 => 13,  49 => 8,  47 => 7,  39 => 1,);
+        return array (  474 => 113,  465 => 112,  444 => 101,  429 => 89,  424 => 86,  415 => 85,  398 => 7,  382 => 305,  378 => 304,  372 => 301,  368 => 300,  364 => 299,  360 => 298,  356 => 297,  350 => 294,  346 => 293,  342 => 292,  336 => 289,  332 => 288,  328 => 287,  322 => 284,  317 => 282,  313 => 281,  307 => 278,  302 => 276,  298 => 275,  294 => 274,  289 => 272,  205 => 191,  193 => 182,  187 => 178,  184 => 112,  182 => 85,  159 => 65,  155 => 64,  151 => 63,  140 => 55,  121 => 39,  106 => 27,  102 => 26,  98 => 25,  94 => 24,  90 => 23,  86 => 22,  82 => 21,  78 => 20,  74 => 19,  70 => 18,  66 => 17,  62 => 16,  56 => 13,  49 => 8,  47 => 7,  39 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -626,9 +631,9 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
                             <div class=\"main-menu f-right d-none d-lg-block\">
                                 <nav> 
                                     <ul id=\"navigation\">    
-                                        <li><a href=\"{{ path('gs_homepage') }}\"> Home</a></li>
-                                        <li><a href=\"#\">About Us</a></li>
-                                        <li><a href=\"#\">Contact</a></li>
+                                        <li><a href=\"{{ path('gs_homepage') }}\">Home</a></li>
+                                        <li><a href=\"{{ path('fos_user_security_login') }}\">Connecter</a></li>
+                                        <li><a href=\"{{ path('fos_user_registration_register') }}\">S'inscrire</a></li>
                                         
                                     </ul>
                                 </nav>
@@ -673,8 +678,8 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
        
             </div>
         </div>
-        {% endblock %}
         <!-- Slider Area End-->
+         {% endblock %}
  {% block body %}
         <!-- Generating Start -->
         <div class=\"generating-area \">

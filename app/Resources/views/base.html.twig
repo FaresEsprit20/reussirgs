@@ -60,9 +60,9 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav> 
                                     <ul id="navigation">    
-                                        <li><a href="{{ path('gs_homepage') }}"> Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="{{ path('gs_homepage') }}">Home</a></li>
+                                        <li><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                                        <li><a href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                                         
                                     </ul>
                                 </nav>
@@ -107,8 +107,8 @@
        
             </div>
         </div>
-        {% endblock %}
         <!-- Slider Area End-->
+         {% endblock %}
  {% block body %}
         <!-- Generating Start -->
         <div class="generating-area ">
