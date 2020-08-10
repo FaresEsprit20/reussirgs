@@ -60,7 +60,10 @@
                                     <ul id="navigation">    
                                         <li><a href="{{ path('gs_homepage') }}">Home</a></li>
                                         <li><a href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
+                                         {% if not is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                                         <li><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                                         {% endif %}
+                                        {% if  is_granted("IS_AUTHENTICATED_REMEMBERED") %}						
                                         <li><a href="#">Compte</a>
                                             <ul class="submenu">
                                         <li><a href="{{ path('fos_user_profile_show') }}">connecté tant que</a>
@@ -69,6 +72,7 @@
                                         <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
                                             </ul>
                                       </li>
+                                      {% endif %}
                                     </ul>
                                 </nav>
                             </div>

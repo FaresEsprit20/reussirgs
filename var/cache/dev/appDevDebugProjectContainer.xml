@@ -163,7 +163,7 @@
     <parameter key="security.authentication.trust_resolver.anonymous_class">Symfony\Component\Security\Core\Authentication\Token\AnonymousToken</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">Symfony\Component\Security\Core\Authentication\Token\RememberMeToken</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
-      <parameter key="ROLE_ANANYMOUS" type="collection">
+      <parameter key="ROLE_USER" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
       <parameter key="ROLE_CLIENT" type="collection">
@@ -2396,12 +2396,19 @@
         </argument>
         <argument>null</argument>
       </call>
+      <call method="add">
+        <argument type="service" id="security.request_matcher.x0_yxqh"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="fos_user.user_provider.username_email"/>
+        <argument type="service" id="fos_user.user_provider.username"/>
       </argument>
       <argument></argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2708,7 +2715,7 @@
       <argument>security.request_matcher.00qf1z7</argument>
       <argument>true</argument>
       <argument>false</argument>
-      <argument>fos_user.user_provider.username_email</argument>
+      <argument>fos_user.user_provider.username</argument>
       <argument>main</argument>
       <argument>security.authentication.form_entry_point.main</argument>
       <argument>null</argument>
@@ -2725,7 +2732,7 @@
     <service id="security.context_listener.0" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="fos_user.user_provider.username_email"/>
+        <argument type="service" id="fos_user.user_provider.username"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2756,7 +2763,7 @@
       <argument>/</argument>
     </service>
     <service id="security.authentication.provider.dao.main" class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
-      <argument type="service" id="fos_user.user_provider.username_email"/>
+      <argument type="service" id="fos_user.user_provider.username"/>
       <argument type="service" id="security.user_checker"/>
       <argument>main</argument>
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -2793,7 +2800,7 @@
       </call>
     </service>
     <service id="security.authentication.listener.form.main" class="Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener" public="false">
-      <tag name="security.remember_me_aware" id="main" provider="fos_user.user_provider.username_email"/>
+      <tag name="security.remember_me_aware" id="main" provider="fos_user.user_provider.username"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.authentication.manager"/>
       <argument type="service" id="security.authentication.session_strategy"/>
@@ -2867,6 +2874,9 @@
     </service>
     <service id="security.request_matcher.h4hgfxz" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
       <argument>^/resetting</argument>
+    </service>
+    <service id="security.request_matcher.x0_yxqh" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/admin/</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
@@ -4611,7 +4621,7 @@
     <service id="Symfony\Component\Security\Http\Firewall" alias="debug.security.firewall" public="false"/>
     <service id="Symfony\Component\Security\Guard\GuardAuthenticatorHandler" alias="security.authentication.guard_handler" public="false"/>
     <service id="security.firewall" alias="debug.security.firewall"/>
-    <service id="security.user.provider.concrete.fos_userbundle" alias="fos_user.user_provider.username_email" public="false"/>
+    <service id="security.user.provider.concrete.fos_userbundle" alias="fos_user.user_provider.username" public="false"/>
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
