@@ -33,27 +33,33 @@ class __TwigTemplate_9d6b6d4dddc07b7625203a4ac52d54aa5e0a8ab794a84a724b34fd52ad8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@FOSUser/Registration/register_content.html.twig"));
 
         // line 2
-        echo "
+        echo " <div class=\"row\">
+<div class=\"col-sm\">
 
-<div class=\"col-lg-6\">
+</div>
+<div class=\"col-sm\">
 ";
-        // line 5
+        // line 7
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start', ["method" => "post", "action" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register"), "attr" => ["class" => "fos_user_registration_register"]]);
         echo "
     ";
-        // line 6
+        // line 8
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "
     <div class=\"form-group text-center\">
         <input type=\"submit\" class=\"genric-btn info text-center\" value=\"";
-        // line 8
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("submit", [], "FOSUserBundle"), "html", null, true);
         echo "\" />
     </div>
 ";
-        // line 10
+        // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
+</div>
+<div class=\"col-sm\">
+
+</div>
 </div>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -75,7 +81,7 @@ class __TwigTemplate_9d6b6d4dddc07b7625203a4ac52d54aa5e0a8ab794a84a724b34fd52ad8
 
     public function getDebugInfo()
     {
-        return array (  55 => 10,  50 => 8,  45 => 6,  41 => 5,  36 => 2,);
+        return array (  57 => 12,  52 => 10,  47 => 8,  43 => 7,  36 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -89,15 +95,21 @@ class __TwigTemplate_9d6b6d4dddc07b7625203a4ac52d54aa5e0a8ab794a84a724b34fd52ad8
     public function getSourceContext()
     {
         return new Source("{% trans_default_domain 'FOSUserBundle' %}
+ <div class=\"row\">
+<div class=\"col-sm\">
 
-
-<div class=\"col-lg-6\">
+</div>
+<div class=\"col-sm\">
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
     <div class=\"form-group text-center\">
         <input type=\"submit\" class=\"genric-btn info text-center\" value=\"{{ 'submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
+</div>
+<div class=\"col-sm\">
+
+</div>
 </div>", "@FOSUser/Registration/register_content.html.twig", "C:\\wamp64\\www\\PFA\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register_content.html.twig");
     }
 }

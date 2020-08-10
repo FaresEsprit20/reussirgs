@@ -109,6 +109,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
                             <div class=\"col-lg-2 col-md-4 \">
                                 <div class=\"hero__caption\">
                                     <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>  
+                                    
                                 </div>
                             </div>
                            
@@ -128,7 +129,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     }
 
-    // line 26
+    // line 27
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -137,25 +138,25 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 27
+        // line 28
         echo "
   ";
-        // line 29
+        // line 30
         echo "  ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", []), "flashbag", []), "all", [], "method"));
         foreach ($context['_seq'] as $context["key"] => $context["messages"]) {
-            // line 30
+            // line 31
             echo "    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 31
+                // line 32
                 echo "      <div class=\"alert alert-";
                 echo twig_escape_filter($this->env, $context["key"], "html", null, true);
                 echo "\">
         ";
-                // line 32
+                // line 33
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($context["message"], [], "FOSUserBundle"), "html", null, true);
                 echo "
       </div>
@@ -164,21 +165,21 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 35
+            // line 36
             echo "  ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 37
         echo "
   ";
-        // line 38
+        // line 39
         echo " 
   ";
-        // line 39
+        // line 40
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 41
+        // line 42
         echo "
 ";
         
@@ -189,7 +190,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     }
 
-    // line 39
+    // line 40
     public function block_fos_user_content($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -198,7 +199,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 40
+        // line 41
         echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -220,7 +221,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     public function getDebugInfo()
     {
-        return array (  202 => 40,  193 => 39,  182 => 41,  180 => 39,  177 => 38,  174 => 36,  168 => 35,  159 => 32,  154 => 31,  149 => 30,  144 => 29,  141 => 27,  132 => 26,  105 => 9,  100 => 6,  91 => 5,  73 => 3,  55 => 2,  33 => 1,);
+        return array (  203 => 41,  194 => 40,  183 => 42,  181 => 40,  178 => 39,  175 => 37,  169 => 36,  160 => 33,  155 => 32,  150 => 31,  145 => 30,  142 => 28,  133 => 27,  105 => 9,  100 => 6,  91 => 5,  73 => 3,  55 => 2,  33 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -247,6 +248,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
                             <div class=\"col-lg-2 col-md-4 \">
                                 <div class=\"hero__caption\">
                                     <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>  
+                                    
                                 </div>
                             </div>
                            

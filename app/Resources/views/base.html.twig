@@ -28,8 +28,6 @@
    </head>
 
    <body>
-     
-
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -61,14 +59,20 @@
                                 <nav> 
                                     <ul id="navigation">    
                                         <li><a href="{{ path('gs_homepage') }}">Home</a></li>
-                                        <li><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
                                         <li><a href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
-                                        
+                                        <li><a href="{{ path('fos_user_security_login') }}">Connecter</a></li>
+                                        <li><a href="#">Compte</a>
+                                            <ul class="submenu">
+                                        <li><a href="{{ path('fos_user_profile_show') }}">connecté tant que</a>
+                                        <li><a href="{{ path('fos_user_profile_edit') }}">Profil</a>
+                                        <li><a href="{{ path('fos_user_change_password') }}">Mot de Passe</a>
+                                        <li><a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+                                            </ul>
+                                      </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>             
-                       
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
@@ -265,11 +269,9 @@
         </div>
       </div>
        <!-- Footer End-->
-
    </footer>
-   
+
 	<!-- JS here -->
-	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 		<!-- Jquery, Popper, Bootstrap -->
@@ -278,7 +280,6 @@
         <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
 	    <!-- Jquery Mobile Menu -->
         <script src="{{ asset('assets/js/jquery.slicknav.min.js')}}"></script>
-
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
         <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
         <script src="{{ asset('assets/js/slick.min.js')}}"></script>
@@ -289,19 +290,16 @@
         <script src="{{ asset('assets/js/wow.min.js')}}"></script>
 		<script src="{{ asset('assets/js/animated.headline.js')}}"></script>
         <script src="{{ asset('assets/js/jquery.magnific-popup.js')}}"></script>
-
 		<!-- Scrollup, nice-select, sticky -->
         <script src="{{ asset('assets/js/jquery.scrollUp.min.js')}}"></script>
         <script src="{{ asset('assets/js/jquery.nice-select.min.js')}}"></script>
 		<script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
-        
         <!-- contact js -->
         <script src="{{ asset('assets/js/contact.js')}}"></script>
         <script src="{{ asset('assets/js/jquery.form.js')}}"></script>
         <script src="{{ asset('assets/js/jquery.validate.min.js')}}"></script>
         <script src="{{ asset('assets/js/mail-script.js')}}"></script>
-        <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-        
+        <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js')}}"></script>        
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="{{ asset('assets/js/plugins.js')}}"></script>
         <script src="{{ asset('assets/js/main.js')}}"></script>
