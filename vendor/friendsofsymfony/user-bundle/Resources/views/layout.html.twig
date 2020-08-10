@@ -2,7 +2,27 @@
 {% block title_page %}Fos User Bundle{% endblock %}
 {% block small_title %}Inscription{% endblock %}
 {# Dans notre layout, il faut définir le block body #}
-
+{% block main %}
+        <!-- Slider Area Start-->
+        <div class="slider-area ">
+            <div class="slider-active">
+                <div class="single-slider slider-height d-flex align-items-center" data-background="{{ asset('assets/img/hero/h1_hero.png')}}">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-2 col-md-4 ">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s">Réussir<br> ma GS</h1>  
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+        <!-- Slider Area End-->
+         {% endblock %}
 {% block body %}
 
   {# On affiche les messages flash que définissent les contrôleurs du bundle #}

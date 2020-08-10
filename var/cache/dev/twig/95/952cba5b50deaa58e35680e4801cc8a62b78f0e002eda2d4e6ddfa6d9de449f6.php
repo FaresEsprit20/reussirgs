@@ -21,6 +21,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
         $this->blocks = [
             'title_page' => [$this, 'block_title_page'],
             'small_title' => [$this, 'block_small_title'],
+            'main' => [$this, 'block_main'],
             'body' => [$this, 'block_body'],
             'fos_user_content' => [$this, 'block_fos_user_content'],
         ];
@@ -86,7 +87,48 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     }
 
-    // line 6
+    // line 5
+    public function block_main($context, array $blocks = [])
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
+
+        // line 6
+        echo "        <!-- Slider Area Start-->
+        <div class=\"slider-area \">
+            <div class=\"slider-active\">
+                <div class=\"single-slider slider-height d-flex align-items-center\" data-background=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/img/hero/h1_hero.png"), "html", null, true);
+        echo "\">
+                    <div class=\"container\">
+                        <div class=\"row d-flex align-items-center\">
+                            <div class=\"col-lg-2 col-md-4 \">
+                                <div class=\"hero__caption\">
+                                    <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>  
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+        <!-- Slider Area End-->
+         ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 26
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -95,25 +137,25 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 27
         echo "
   ";
-        // line 9
+        // line 29
         echo "  ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute(($context["app"] ?? $this->getContext($context, "app")), "session", []), "flashbag", []), "all", [], "method"));
         foreach ($context['_seq'] as $context["key"] => $context["messages"]) {
-            // line 10
+            // line 30
             echo "    ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 11
+                // line 31
                 echo "      <div class=\"alert alert-";
                 echo twig_escape_filter($this->env, $context["key"], "html", null, true);
                 echo "\">
         ";
-                // line 12
+                // line 32
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans($context["message"], [], "FOSUserBundle"), "html", null, true);
                 echo "
       </div>
@@ -122,21 +164,21 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 15
+            // line 35
             echo "  ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
+        // line 36
         echo "
   ";
-        // line 18
+        // line 38
         echo " 
   ";
-        // line 19
+        // line 39
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 21
+        // line 41
         echo "
 ";
         
@@ -147,7 +189,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     }
 
-    // line 19
+    // line 39
     public function block_fos_user_content($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -156,7 +198,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 20
+        // line 40
         echo "  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -178,7 +220,7 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 
     public function getDebugInfo()
     {
-        return array (  160 => 20,  151 => 19,  140 => 21,  138 => 19,  135 => 18,  132 => 16,  126 => 15,  117 => 12,  112 => 11,  107 => 10,  102 => 9,  99 => 7,  90 => 6,  72 => 3,  54 => 2,  32 => 1,);
+        return array (  202 => 40,  193 => 39,  182 => 41,  180 => 39,  177 => 38,  174 => 36,  168 => 35,  159 => 32,  154 => 31,  149 => 30,  144 => 29,  141 => 27,  132 => 26,  105 => 9,  100 => 6,  91 => 5,  73 => 3,  55 => 2,  33 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -195,7 +237,27 @@ class __TwigTemplate_5706c27adc6194186a6dcaa67f77aca1d3a6cb4e8df263d64fc840c854e
 {% block title_page %}Fos User Bundle{% endblock %}
 {% block small_title %}Inscription{% endblock %}
 {# Dans notre layout, il faut définir le block body #}
-
+{% block main %}
+        <!-- Slider Area Start-->
+        <div class=\"slider-area \">
+            <div class=\"slider-active\">
+                <div class=\"single-slider slider-height d-flex align-items-center\" data-background=\"{{ asset('assets/img/hero/h1_hero.png')}}\">
+                    <div class=\"container\">
+                        <div class=\"row d-flex align-items-center\">
+                            <div class=\"col-lg-2 col-md-4 \">
+                                <div class=\"hero__caption\">
+                                    <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>  
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+        <!-- Slider Area End-->
+         {% endblock %}
 {% block body %}
 
   {# On affiche les messages flash que définissent les contrôleurs du bundle #}

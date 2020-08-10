@@ -47,7 +47,7 @@ class __TwigTemplate_9d6b6d4dddc07b7625203a4ac52d54aa5e0a8ab794a84a724b34fd52ad8
     <div class=\"form-group text-center\">
         <input type=\"submit\" class=\"genric-btn info text-center\" value=\"";
         // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("registration.submit", [], "FOSUserBundle"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("submit", [], "FOSUserBundle"), "html", null, true);
         echo "\" />
     </div>
 ";
@@ -95,7 +95,7 @@ class __TwigTemplate_9d6b6d4dddc07b7625203a4ac52d54aa5e0a8ab794a84a724b34fd52ad8
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
     <div class=\"form-group text-center\">
-        <input type=\"submit\" class=\"genric-btn info text-center\" value=\"{{ 'registration.submit'|trans }}\" />
+        <input type=\"submit\" class=\"genric-btn info text-center\" value=\"{{ 'submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
 </div>", "@FOSUser/Registration/register_content.html.twig", "C:\\wamp64\\www\\PFA\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\register_content.html.twig");
