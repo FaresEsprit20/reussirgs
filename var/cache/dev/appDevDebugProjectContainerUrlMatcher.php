@@ -112,9 +112,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::indexAction',  '_route' => 'gs_homepage',);
         }
 
-        // additiontrou
-        if ('/additionpartrou' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::additionParTrouAction',  '_route' => 'additiontrou',);
+        // calculate
+        if ('/calculate' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::calculateAction',  '_route' => 'calculate',);
         }
 
         if (0 === strpos($pathinfo, '/comp')) {
@@ -135,7 +135,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/m')) {
+        // additiontrou
+        if ('/additionpartrou' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::additionParTrouAction',  '_route' => 'additiontrou',);
+        }
+
+        // soustraction
+        if ('/soustraction' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::soustractionAction',  '_route' => 'soustraction',);
+        }
+
+        if (0 === strpos($pathinfo, '/m')) {
             // moinsplus
             if ('/moinsplus' === $pathinfo) {
                 return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::moinsplusAction',  '_route' => 'moinsplus',);
@@ -151,11 +161,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::mesurerlongueursAction',  '_route' => 'mesurerlongueurs',);
             }
 
-        }
-
-        // soustraction
-        if ('/soustraction' === $pathinfo) {
-            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::soustractionAction',  '_route' => 'soustraction',);
         }
 
         // jourssemaines

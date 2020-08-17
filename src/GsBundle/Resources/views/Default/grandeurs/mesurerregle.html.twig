@@ -216,6 +216,7 @@ background-color: black;
 
   <script>
     jQuery( document ).ready(function( $ ) {
+      var score = Number(window.localStorage.getItem('score'));
      $( function() {
     $( "#ruler" ).draggable();
   } );
@@ -224,21 +225,20 @@ background-color: black;
         $("#valider").click(function () {
      
       if($("#lnum").val() == 2){
+              score+=10;
+              window.localStorage.setItem('score', score);
            $("#html").html('<div class="section-tittle text-center"><h2 style="color:green">Bravo!</h2>	'
           );
             }else{
               $("#html").html('<div class="section-tittle text-center"><h2 style="color:red">Echec! la bonne réponse est 2</h2>	');
             }
-           
-             $("input").prop("disabled",true);
-             
+             $("input").prop("disabled",true);   
                $("#ok").attr("hidden",false);
-          
-         
         });
     
  $("#ok").click(function () {
           $("#response").text("");
+          window.location.replace("jourssemaines");
         });
     });
 

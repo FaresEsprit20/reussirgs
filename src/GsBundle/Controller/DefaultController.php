@@ -1,79 +1,123 @@
 <?php
 
 namespace GsBundle\Controller;
-
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 use AppBundle\AppBundle;
+use GsBundle\Entity\Score;
 
 class DefaultController extends Controller
 {
+
     public function indexAction()
     {
+        $score = 0;
+        $id = $this->getUser()->getId();
         return $this->render('Default/index.html.twig');
     }
 
 
-    public function additionParTrouAction()
+    public function additionParTrouAction(Request $request)
     {
-        return $this->render('@Gs/Default/additiontrou.html.twig');
+        $score = $request->get('score');
+        $score =  intval($score);
+        $request->attributes->set('score', $score);
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/additiontrou.html.twig',array('score'=>$score));
     }
 
-    public function comparerpartroisAction()
+
+    public function calculateAction(Request $request)
     {
-        return $this->render('@Gs/Default/comparerpar3.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $score = $request->get('score');
+        $score =  intval($score);
+        $id = $this->getUser()->getId();
+        $entity = new Score();
+        $entity->setScore($score);
+        $entity->setUser($id);
+        $em->persist($entity);
+        $em->flush();
+        return new JsonResponse (array('score'=>$score));
     }
 
-    public function moinsplusAction()
-    {
-        return $this->render('@Gs/Default/moinsplus.html.twig');
-    }
 
-    public function soustractionAction()
+    public function soustractionAction(Request $request)
     {
+        //$request->request->set()
+        $id = $this->getUser()->getId();
         return $this->render('@Gs/Default/soustraction.html.twig');
     }
 
+
+    public function comparerpartroisAction()
+    {
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/comparerpar3.html.twig',array('id'=>$id));
+    }
+
+
+    public function moinsplusAction()
+    {
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/moinsplus.html.twig',array('id'=>$id));
+    }
+
+
     public function compterdeuxAction()
     {
-        return $this->render('@Gs/Default/compterdeux.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/compterdeux.html.twig',array('id'=>$id));
     }
 
     public function comparerlongueursAction()
     {
-        return $this->render('@Gs/Default/grandeurs/comparerlongueurs.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/grandeurs/comparerlongueurs.html.twig',array('id'=>$id));
     }
 
     public function jourssemainesAction()
     {
-        return $this->render('@Gs/Default/grandeurs/nbjours.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/grandeurs/nbjours.html.twig',array('id'=>$id));
     }
 
     public function moisanneesAction()
     {
-        return $this->render('@Gs/Default/grandeurs/moisannee.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/grandeurs/moisannee.html.twig',array('id'=>$id));
     }
 
     public function liretemperatureAction()
     {
-        return $this->render('@Gs/Default/grandeurs/liretemperature.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/grandeurs/liretemperature.html.twig',array('id'=>$id));
     }
 
     public function mesurerlongueursAction()
     {
-        return $this->render('@Gs/Default/grandeurs/mesurerregle.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/grandeurs/mesurerregle.html.twig',array('id'=>$id));
     }
 
     public function recsolidesAction()
     {
-        return $this->render('@Gs/Default/espace/solides.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/espace/solides.html.twig',array('id'=>$id));
     }
 
     public function planesAction()
     {
-        return $this->render('@Gs/Default/espace/planes.html.twig');
+        $id = $this->getUser()->getId();
+        return $this->render('@Gs/Default/espace/planes.html.twig',array('id'=>$id));
     }
 
-  
+
 
 }
 

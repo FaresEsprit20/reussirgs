@@ -143,9 +143,7 @@ height: 100px;
         echo "\">
      </div>
     </div>
-<br>
-
-      
+<br>     
     <br>
       <div id=\"banner\" class=\"banner\">
     <button id=\"btn1\" type=\"button\" class=\"btn btn-lg  img\" >25°C</button>
@@ -169,13 +167,17 @@ height: 100px;
   <script>
     jQuery( document ).ready(function( \$ ) {
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
+   var score = Number(window.localStorage.getItem('score'));
         \$(\"#valider\").click(function () {
-         
           if(!\$('.img').hasClass('selectedd')){
             alert(\"vide! choisir une option\");
           }else{
             if(\$('.selectedd').index() == 3){ 
+              score+=10;
+              window.localStorage.setItem('score', score);
            \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
+           score+=10;
+              window.localStorage.setItem('score', score);
          document.getElementById('response').scrollIntoView();
             }else{
               \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2>\t');
@@ -190,6 +192,7 @@ height: 100px;
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"\");
+         window.location.replace(\"recsolides\");
         });
     });
 
@@ -293,9 +296,7 @@ height: 100px;
     <img  src =\"{{ asset('assets/images/therm.png') }}\">
      </div>
     </div>
-<br>
-
-      
+<br>     
     <br>
       <div id=\"banner\" class=\"banner\">
     <button id=\"btn1\" type=\"button\" class=\"btn btn-lg  img\" >25°C</button>
@@ -319,13 +320,17 @@ height: 100px;
   <script>
     jQuery( document ).ready(function( \$ ) {
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
+   var score = Number(window.localStorage.getItem('score'));
         \$(\"#valider\").click(function () {
-         
           if(!\$('.img').hasClass('selectedd')){
             alert(\"vide! choisir une option\");
           }else{
             if(\$('.selectedd').index() == 3){ 
+              score+=10;
+              window.localStorage.setItem('score', score);
            \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
+           score+=10;
+              window.localStorage.setItem('score', score);
          document.getElementById('response').scrollIntoView();
             }else{
               \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2>\t');
@@ -340,6 +345,7 @@ height: 100px;
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"\");
+         window.location.replace(\"recsolides\");
         });
     });
 

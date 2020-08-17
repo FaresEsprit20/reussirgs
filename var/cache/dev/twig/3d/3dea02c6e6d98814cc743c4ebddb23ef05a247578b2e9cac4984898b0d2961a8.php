@@ -209,18 +209,18 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 ";
         // line 94
         $this->displayBlock('main', $context, $blocks);
-        // line 121
+        // line 123
         echo "         <div>
  ";
-        // line 122
+        // line 124
         $this->displayBlock('body', $context, $blocks);
-        // line 188
+        // line 191
         echo "    </main>
    <footer>
 
        <!-- Footer Start-->
       <div class=\"footer-main\" data-background=\"";
-        // line 192
+        // line 195
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/img/shape/footer_bg.png"), "html", null, true);
         echo "\">
         <div class=\"footer-area footer-padding\">
@@ -232,7 +232,7 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
                               <!-- logo -->
                              <div class=\"footer-logo\">
                                  <a href=\"#\"><img src=\"";
-        // line 201
+        // line 204
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/img/logo/logo2_footer.png"), "html", null, true);
         echo "\" alt=\"\"></a>
                              </div>
@@ -314,96 +314,96 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 \t<!-- JS here -->
 \t\t<!-- All JS Custom Plugins Link Here here -->
         <script src=\"";
-        // line 280
+        // line 283
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/vendor/modernizr-3.5.0.min.js"), "html", null, true);
         echo "\"></script>
 \t\t<!-- Jquery, Popper, Bootstrap -->
 \t\t<script src=\"";
-        // line 282
+        // line 285
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/vendor/jquery-1.12.4.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 283
+        // line 286
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/popper.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 284
+        // line 287
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 \t    <!-- Jquery Mobile Menu -->
         <script src=\"";
-        // line 286
+        // line 289
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.slicknav.min.js"), "html", null, true);
         echo "\"></script>
 \t\t<!-- Jquery Slick , Owl-Carousel Plugins -->
         <script src=\"";
-        // line 288
+        // line 291
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/owl.carousel.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 289
+        // line 292
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/slick.min.js"), "html", null, true);
         echo "\"></script>
         <!-- Date Picker -->
         <script src=\"";
-        // line 291
+        // line 294
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/gijgo.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js\"></script>
 \t\t<!-- One Page, Animated-HeadLin -->
         <script src=\"";
-        // line 294
+        // line 297
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/wow.min.js"), "html", null, true);
         echo "\"></script>
 \t\t<script src=\"";
-        // line 295
+        // line 298
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/animated.headline.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 296
+        // line 299
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.magnific-popup.js"), "html", null, true);
         echo "\"></script>
 \t\t<!-- Scrollup, nice-select, sticky -->
         <script src=\"";
-        // line 298
+        // line 301
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.scrollUp.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 299
+        // line 302
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
 \t\t<script src=\"";
-        // line 300
+        // line 303
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
         <!-- contact js -->
         <script src=\"";
-        // line 302
+        // line 305
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/contact.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 303
+        // line 306
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.form.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 304
+        // line 307
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.validate.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 305
+        // line 308
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/mail-script.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 306
+        // line 309
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "\"></script>        
 \t\t<!-- Jquery Plugins, main Jquery -->\t
         <script src=\"";
-        // line 308
+        // line 311
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/plugins.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 309
+        // line 312
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "\"></script>
         
@@ -459,13 +459,18 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
                                 <div class=\"hero__caption\">
                                     <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>
                                     <p data-animation=\"fadeInLeft\" data-delay=\".6s\">Voici une liste des compétences en maths que les élèves acquièrent en GS, classées en catégories. Placez votre souris sur le nom d'une compétence pour voir un exemple de question. Pour commencer à travailler, cliquez sur un lien. </p>
-                                   
+                                    <div class=\"hero__btn\" data-animation=\"fadeInLeft\" data-delay=\".8s\">
+                                        <a href=\"";
+        // line 106
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("additiontrou");
+        echo "\" class=\"btn hero-btn\">Commencer</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class=\"col-lg-5\">
                                 <div class=\"hero__img d-none d-lg-block\" data-animation=\"fadeInRight\" data-delay=\"1s\">
                                     <img src=\"";
-        // line 110
+        // line 112
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/img/hero/hero_right.png"), "html", null, true);
         echo "\" alt=\"\">
                                 </div>
@@ -486,7 +491,7 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 
     }
 
-    // line 122
+    // line 124
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -495,8 +500,9 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 123
-        echo "        <!-- Generating Start -->
+        // line 125
+        echo " 
+        <!-- Generating Start -->
         <div class=\"generating-area \">
             <div class=\"container\">
                  <!-- Section-tittle -->
@@ -581,7 +587,7 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
 
     public function getDebugInfo()
     {
-        return array (  499 => 123,  490 => 122,  469 => 110,  454 => 98,  449 => 95,  440 => 94,  423 => 7,  407 => 309,  403 => 308,  398 => 306,  394 => 305,  390 => 304,  386 => 303,  382 => 302,  377 => 300,  373 => 299,  369 => 298,  364 => 296,  360 => 295,  356 => 294,  350 => 291,  345 => 289,  341 => 288,  336 => 286,  331 => 284,  327 => 283,  323 => 282,  318 => 280,  236 => 201,  224 => 192,  218 => 188,  216 => 122,  213 => 121,  211 => 94,  191 => 76,  184 => 72,  180 => 71,  176 => 70,  172 => 69,  165 => 66,  159 => 64,  157 => 63,  153 => 62,  149 => 61,  138 => 53,  119 => 37,  106 => 27,  102 => 26,  98 => 25,  94 => 24,  90 => 23,  86 => 22,  82 => 21,  78 => 20,  74 => 19,  70 => 18,  66 => 17,  62 => 16,  56 => 13,  49 => 8,  47 => 7,  39 => 1,);
+        return array (  504 => 125,  495 => 124,  474 => 112,  465 => 106,  454 => 98,  449 => 95,  440 => 94,  423 => 7,  407 => 312,  403 => 311,  398 => 309,  394 => 308,  390 => 307,  386 => 306,  382 => 305,  377 => 303,  373 => 302,  369 => 301,  364 => 299,  360 => 298,  356 => 297,  350 => 294,  345 => 292,  341 => 291,  336 => 289,  331 => 287,  327 => 286,  323 => 285,  318 => 283,  236 => 204,  224 => 195,  218 => 191,  216 => 124,  213 => 123,  211 => 94,  191 => 76,  184 => 72,  180 => 71,  176 => 70,  172 => 69,  165 => 66,  159 => 64,  157 => 63,  153 => 62,  149 => 61,  138 => 53,  119 => 37,  106 => 27,  102 => 26,  98 => 25,  94 => 24,  90 => 23,  86 => 22,  82 => 21,  78 => 20,  74 => 19,  70 => 18,  66 => 17,  62 => 16,  56 => 13,  49 => 8,  47 => 7,  39 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -698,7 +704,9 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
                                 <div class=\"hero__caption\">
                                     <h1 data-animation=\"fadeInLeft\" data-delay=\".4s\">Réussir<br> ma GS</h1>
                                     <p data-animation=\"fadeInLeft\" data-delay=\".6s\">Voici une liste des compétences en maths que les élèves acquièrent en GS, classées en catégories. Placez votre souris sur le nom d'une compétence pour voir un exemple de question. Pour commencer à travailler, cliquez sur un lien. </p>
-                                   
+                                    <div class=\"hero__btn\" data-animation=\"fadeInLeft\" data-delay=\".8s\">
+                                        <a href=\"{{ path('additiontrou') }}\" class=\"btn hero-btn\">Commencer</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class=\"col-lg-5\">
@@ -716,6 +724,7 @@ class __TwigTemplate_04e70dca4c75f4cca5c849efeea168c4a1fadb7ab7bf4f3921c80cd5f6c
          {% endblock %}
          <div>
  {% block body %}
+ 
         <!-- Generating Start -->
         <div class=\"generating-area \">
             <div class=\"container\">

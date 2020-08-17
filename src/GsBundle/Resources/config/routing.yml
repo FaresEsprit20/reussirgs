@@ -2,9 +2,17 @@ gs_homepage:
     path:     /home
     defaults: { _controller: GsBundle:Default:index }
 
+calculate:
+    path:     /calculate
+    defaults: { _controller: GsBundle:Default:calculate }
+
 additiontrou:
     path:     /additionpartrou
     defaults: { _controller: GsBundle:Default:additionParTrou }
+
+soustraction:
+    path:     /soustraction
+    defaults: { _controller: GsBundle:Default:soustraction }
 
 comparertrois:
     path:     /comparertrois
@@ -14,9 +22,6 @@ moinsplus:
     path:     /moinsplus
     defaults: { _controller: GsBundle:Default:moinsplus }
 
-soustraction:
-    path:     /soustraction
-    defaults: { _controller: GsBundle:Default:soustraction }
 
 compterdeux:
     path:     /compterdeux
@@ -49,3 +54,4 @@ recsolides:
 planes:
     path:     /planes
     defaults: { _controller: GsBundle:Default:planes }
+

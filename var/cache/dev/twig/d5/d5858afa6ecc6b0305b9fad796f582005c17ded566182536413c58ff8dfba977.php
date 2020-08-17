@@ -164,12 +164,15 @@ img:hover {
 
   <script>
     jQuery( document ).ready(function( \$ ) {
+      var score = Number(window.localStorage.getItem('score'));
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
         \$(\"#valider\").click(function () {
           if(!\$('.img').hasClass('selectedd')){
             alert(\"vide! choisir une option\");
           }else{
             if(\$('.selectedd').index() == 1){ 
+              score+=10;
+              window.localStorage.setItem('score', score);
            \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
          document.getElementById('response').scrollIntoView();
             }else{
@@ -183,6 +186,7 @@ img:hover {
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"\");
+          window.location.replace(\"mesurerlongueurs\");
         });
     });
 
@@ -306,12 +310,15 @@ img:hover {
 
   <script>
     jQuery( document ).ready(function( \$ ) {
+      var score = Number(window.localStorage.getItem('score'));
       //identification de l'image sélectionné et trouver l'index de l'image de la bonne réponse
         \$(\"#valider\").click(function () {
           if(!\$('.img').hasClass('selectedd')){
             alert(\"vide! choisir une option\");
           }else{
             if(\$('.selectedd').index() == 1){ 
+              score+=10;
+              window.localStorage.setItem('score', score);
            \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
          document.getElementById('response').scrollIntoView();
             }else{
@@ -325,6 +332,7 @@ img:hover {
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"\");
+          window.location.replace(\"mesurerlongueurs\");
         });
     });
 

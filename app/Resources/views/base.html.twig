@@ -102,7 +102,9 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s">Réussir<br> ma GS</h1>
                                     <p data-animation="fadeInLeft" data-delay=".6s">Voici une liste des compétences en maths que les élèves acquièrent en GS, classées en catégories. Placez votre souris sur le nom d'une compétence pour voir un exemple de question. Pour commencer à travailler, cliquez sur un lien. </p>
-                                   
+                                    <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
+                                        <a href="{{ path('additiontrou') }}" class="btn hero-btn">Commencer</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-5">
@@ -120,6 +122,7 @@
          {% endblock %}
          <div>
  {% block body %}
+ 
         <!-- Generating Start -->
         <div class="generating-area ">
             <div class="container">

@@ -47,11 +47,14 @@
   <!-- Tips Triks End -->
   <script>
     jQuery( document ).ready(function( $ ) {
+      var score = Number(window.localStorage.getItem('score'));
         $("#valider").click(function () {
           if($("#lnum").val().length ==0){
             alert("Empty!");
           }else{
             if($("#lnum").val() == 12){
+              score+=10;
+              window.localStorage.setItem('score', score);
            $("#html").html('<div class="section-tittle text-center"><h2 style="color:green">Bravo!</h2>	'
           );
             }else{
@@ -66,6 +69,7 @@
 
  $("#ok").click(function () {
           $("#response").text("");
+          window.location.replace("liretemperature");
         });
 
     });
