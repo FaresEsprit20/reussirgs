@@ -145,6 +145,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::soustractionAction',  '_route' => 'soustraction',);
         }
 
+        // scores
+        if ('/scores' === $pathinfo) {
+            return array (  '_controller' => 'GsBundle\\Controller\\DefaultController::scoresAction',  '_route' => 'scores',);
+        }
+
         if (0 === strpos($pathinfo, '/m')) {
             // moinsplus
             if ('/moinsplus' === $pathinfo) {
@@ -386,6 +391,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_fos_user_change_password:
 
+        }
+
+        // delete
+        if (0 === strpos($pathinfo, '/delete') && preg_match('#^/delete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, ['_route' => 'delete']), array (  '_controller' => 'GsBundle\\Controller\\DefaultController::deleteAction',));
         }
 
         // homepage

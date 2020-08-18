@@ -148,18 +148,7 @@ class __TwigTemplate_5ae79f1e34235c96bec07e9aeb5643a841ba3075781989459cc27c87932
             if(\$(\"#lnum\").val() == 8){
               score+=10;
               window.localStorage.setItem('score', score);
-        \$.ajax({
-        url: \"";
-        // line 60
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("calculate");
-        echo "\",
-        type: \"POST\",
-        data: { \"score\": score },
-        dataType: \"json\",
-        success: function(result) {
-          alert(result.score);
-        }
-    });   
+          
            \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2></div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>\t'
           );
             }else{
@@ -210,7 +199,7 @@ class __TwigTemplate_5ae79f1e34235c96bec07e9aeb5643a841ba3075781989459cc27c87932
 
     public function getDebugInfo()
     {
-        return array (  154 => 60,  102 => 10,  93 => 9,  82 => 6,  73 => 5,  62 => 3,  53 => 2,  31 => 1,);
+        return array (  102 => 10,  93 => 9,  82 => 6,  73 => 5,  62 => 3,  53 => 2,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -281,15 +270,7 @@ class __TwigTemplate_5ae79f1e34235c96bec07e9aeb5643a841ba3075781989459cc27c87932
             if(\$(\"#lnum\").val() == 8){
               score+=10;
               window.localStorage.setItem('score', score);
-        \$.ajax({
-        url: \"{{ path('calculate') }}\",
-        type: \"POST\",
-        data: { \"score\": score },
-        dataType: \"json\",
-        success: function(result) {
-          alert(result.score);
-        }
-    });   
+          
            \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2></div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>\t'
           );
             }else{

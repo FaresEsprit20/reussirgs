@@ -107,9 +107,10 @@ img:hover {
         type: "POST",
         data: { "score": score },
         success: function(result) {
-          alert(result.score);
-        }
+          alert(result);
           window.localStorage.removeItem("score");
+        }
+          
         });
     });
 
@@ -125,6 +126,7 @@ $(function(){
         
     });   
     
+});
 });
  
 </script>

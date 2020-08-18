@@ -199,7 +199,18 @@ img:hover {
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"Votre Score Total est   : \"+score);
+          \$.ajax({
+        url: \"";
+        // line 106
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("calculate");
+        echo "\",
+        type: \"POST\",
+        data: { \"score\": score },
+        success: function(result) {
+          alert(result);
           window.localStorage.removeItem(\"score\");
+        }
+          
         });
     });
 
@@ -215,6 +226,7 @@ img:hover {
         
     });   
     
+});
 });
  
 </script>
@@ -241,7 +253,7 @@ img:hover {
 
     public function getDebugInfo()
     {
-        return array (  160 => 64,  156 => 63,  135 => 44,  126 => 43,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
+        return array (  205 => 106,  160 => 64,  156 => 63,  135 => 44,  126 => 43,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -358,7 +370,15 @@ img:hover {
     
  \$(\"#ok\").click(function () {
           \$(\"#response\").text(\"Votre Score Total est   : \"+score);
+          \$.ajax({
+        url: \"{{ path('calculate') }}\",
+        type: \"POST\",
+        data: { \"score\": score },
+        success: function(result) {
+          alert(result);
           window.localStorage.removeItem(\"score\");
+        }
+          
         });
     });
 
@@ -374,6 +394,7 @@ img:hover {
         
     });   
     
+});
 });
  
 </script>

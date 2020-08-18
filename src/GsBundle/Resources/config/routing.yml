@@ -55,3 +55,12 @@ planes:
     path:     /planes
     defaults: { _controller: GsBundle:Default:planes }
 
+scores:
+    path:     /scores
+    defaults: { _controller: GsBundle:Default:scores }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: GsBundle:Default:delete }
+    
+

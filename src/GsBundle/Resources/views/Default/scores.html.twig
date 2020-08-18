@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+  _ Moins ou Plus
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}
+
+{% block body %}
+  <!-- Tips Triks Start -->
+  <div class="tips-triks-area tips-padding">
+    <div class="container">
+      <!-- Section-tittle -->
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 pr-0">
+          <div class="section-tittle text-center">
+            <h5>
+              Mes Scores
+               {% for item in scores %}
+    <p class="sample-text "> {{ item.id }} ?<p>
+    <p class="sample-text "> {{ item.user }} ?<p>
+     <p class="sample-text "> {{ item.score }} ?<p>
+    <p class="sample-text "> {{ item.datetime|date("m/d/Y/h:m:s") }} ?<p>
+    {% endfor %}
+            </h5>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+	<div class="section-top-border">
+				<h3 class="mb-30">Mes Scores</h3>
+				<div class="progress-table-wrap">
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial">#</div>
+							<div class="country">Score</div>
+							<div class="visit">Date</div>
+                            <div class="action">Action</div>
+							
+						</div>
+                        {% for item in scores %}
+						<div class="table-row">
+							<div class="serial">{{ item.id }}</div>
+							<div class="country"> {{item.score }}</div>
+							<div class="visit">{{ item.datetime|date("m/d/Y/h:m:s") }}</div>
+                            <div class="action">	<a href="{{ path('delete', { 'id': item.id }) }}" class="genric-btn info radius">Supprimer</a></div>
+						</div>
+                         {% endfor %}
+				
+					</div>
+				</div>
+			</div>
+
+
+  <!-- Tips Triks End -->
+
+{% endblock %}
+
+

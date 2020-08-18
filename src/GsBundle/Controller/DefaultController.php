@@ -37,13 +37,33 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $score = $request->get('score');
         $score =  intval($score);
-        $id = $this->getUser()->getId();
+        $id = $this->getUser();
         $entity = new Score();
         $entity->setScore($score);
         $entity->setUser($id);
         $em->persist($entity);
         $em->flush();
-        return new JsonResponse (array('score'=>$score));
+        return new Response ("ok");
+    }
+
+
+    public function scoresAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $id = $this->getUser();
+        $scores = $em->getRepository(Score::class)->findBy(array('user'=> $id));  
+        return $this->render('@Gs/Default/scores.html.twig',array('scores'=>$scores));
+    }
+
+    public function deleteAction(Request $request)
+    {
+        $id = $request->get('id');
+        $em = $this->getDoctrine()->getManager();
+
+        $score = $em->getRepository(Score::class)->find($id);
+        $em->remove($score);
+        $em->flush();
+        return $this->redirectToRoute('scores');
     }
 
 
