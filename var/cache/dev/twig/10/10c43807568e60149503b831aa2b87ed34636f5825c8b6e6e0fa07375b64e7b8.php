@@ -106,36 +106,6 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
       <div class=\"row d-flex justify-content-center\">
         <div class=\"col-lg-6 col-md-8 pr-0\">
           <div class=\"section-tittle text-center\">
-            <h5>
-              Mes Scores
-               ";
-        // line 20
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["scores"] ?? $this->getContext($context, "scores")));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 21
-            echo "    <p class=\"sample-text \"> ";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "id", []), "html", null, true);
-            echo " ?<p>
-    <p class=\"sample-text \"> ";
-            // line 22
-            echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "user", []), "html", null, true);
-            echo " ?<p>
-     <p class=\"sample-text \"> ";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "score", []), "html", null, true);
-            echo " ?<p>
-    <p class=\"sample-text \"> ";
-            // line 24
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["item"], "datetime", []), "m/d/Y/h:m:s"), "html", null, true);
-            echo " ?<p>
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
-        echo "            </h5>
           </div>
         </div>
       </div>
@@ -154,26 +124,26 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
                         ";
-        // line 44
+        // line 35
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["scores"] ?? $this->getContext($context, "scores")));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 45
+            // line 36
             echo "\t\t\t\t\t\t<div class=\"table-row\">
 \t\t\t\t\t\t\t<div class=\"serial\">";
-            // line 46
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "id", []), "html", null, true);
             echo "</div>
 \t\t\t\t\t\t\t<div class=\"country\"> ";
-            // line 47
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["item"], "score", []), "html", null, true);
             echo "</div>
 \t\t\t\t\t\t\t<div class=\"visit\">";
-            // line 48
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["item"], "datetime", []), "m/d/Y/h:m:s"), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["item"], "datetime", []), "m/d/Y"), "html", null, true);
             echo "</div>
                             <div class=\"action\">\t<a href=\"";
-            // line 49
+            // line 40
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("delete", ["id" => $this->getAttribute($context["item"], "id", [])]), "html", null, true);
             echo "\" class=\"genric-btn info radius\">Supprimer</a></div>
 \t\t\t\t\t\t</div>
@@ -182,7 +152,7 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 43
         echo "\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -212,7 +182,7 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
 
     public function getDebugInfo()
     {
-        return array (  186 => 52,  177 => 49,  173 => 48,  169 => 47,  165 => 46,  162 => 45,  158 => 44,  138 => 26,  130 => 24,  126 => 23,  122 => 22,  117 => 21,  113 => 20,  102 => 11,  93 => 10,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
+        return array (  156 => 43,  147 => 40,  143 => 39,  139 => 38,  135 => 37,  132 => 36,  128 => 35,  102 => 11,  93 => 10,  82 => 7,  73 => 6,  62 => 3,  53 => 2,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -242,15 +212,6 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
       <div class=\"row d-flex justify-content-center\">
         <div class=\"col-lg-6 col-md-8 pr-0\">
           <div class=\"section-tittle text-center\">
-            <h5>
-              Mes Scores
-               {% for item in scores %}
-    <p class=\"sample-text \"> {{ item.id }} ?<p>
-    <p class=\"sample-text \"> {{ item.user }} ?<p>
-     <p class=\"sample-text \"> {{ item.score }} ?<p>
-    <p class=\"sample-text \"> {{ item.datetime|date(\"m/d/Y/h:m:s\") }} ?<p>
-    {% endfor %}
-            </h5>
           </div>
         </div>
       </div>
@@ -272,7 +233,7 @@ class __TwigTemplate_9ec641374ecc590aa8b5b9fb4ab01a524246ebec78aea31932a0686a6cc
 \t\t\t\t\t\t<div class=\"table-row\">
 \t\t\t\t\t\t\t<div class=\"serial\">{{ item.id }}</div>
 \t\t\t\t\t\t\t<div class=\"country\"> {{item.score }}</div>
-\t\t\t\t\t\t\t<div class=\"visit\">{{ item.datetime|date(\"m/d/Y/h:m:s\") }}</div>
+\t\t\t\t\t\t\t<div class=\"visit\">{{ item.datetime|date(\"m/d/Y\") }}</div>
                             <div class=\"action\">\t<a href=\"{{ path('delete', { 'id': item.id }) }}\" class=\"genric-btn info radius\">Supprimer</a></div>
 \t\t\t\t\t\t</div>
                          {% endfor %}

@@ -175,12 +175,12 @@ height: 100px;
             if(\$('.selectedd').index() == 3){ 
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
+           \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>');
            score+=10;
               window.localStorage.setItem('score', score);
          document.getElementById('response').scrollIntoView();
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2></div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>\t');
             document.getElementById('response').scrollIntoView();
             }       
              \$(\"input\").prop(\"disabled\",true);
@@ -328,12 +328,12 @@ height: 100px;
             if(\$('.selectedd').index() == 3){ 
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t');
+           \$(\"#html\").html('<div class=\"section-tittle text-center success\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>');
            score+=10;
               window.localStorage.setItem('score', score);
          document.getElementById('response').scrollIntoView();
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center danger\"><h2 style=\"color:red\">Echec! la bonne réponse est 35°C </h2></div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>\t');
             document.getElementById('response').scrollIntoView();
             }       
              \$(\"input\").prop(\"disabled\",true);

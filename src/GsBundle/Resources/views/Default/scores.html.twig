@@ -15,15 +15,6 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 col-md-8 pr-0">
           <div class="section-tittle text-center">
-            <h5>
-              Mes Scores
-               {% for item in scores %}
-    <p class="sample-text "> {{ item.id }} ?<p>
-    <p class="sample-text "> {{ item.user }} ?<p>
-     <p class="sample-text "> {{ item.score }} ?<p>
-    <p class="sample-text "> {{ item.datetime|date("m/d/Y/h:m:s") }} ?<p>
-    {% endfor %}
-            </h5>
           </div>
         </div>
       </div>
@@ -45,7 +36,7 @@
 						<div class="table-row">
 							<div class="serial">{{ item.id }}</div>
 							<div class="country"> {{item.score }}</div>
-							<div class="visit">{{ item.datetime|date("m/d/Y/h:m:s") }}</div>
+							<div class="visit">{{ item.datetime|date("m/d/Y") }}</div>
                             <div class="action">	<a href="{{ path('delete', { 'id': item.id }) }}" class="genric-btn info radius">Supprimer</a></div>
 						</div>
                          {% endfor %}

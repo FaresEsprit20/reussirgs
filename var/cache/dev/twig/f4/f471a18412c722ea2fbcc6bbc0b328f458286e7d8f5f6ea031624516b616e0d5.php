@@ -147,10 +147,10 @@ class __TwigTemplate_fbb3ba765708fd5bd845c8d3668ae17dd7c4d5c5748d7a47a4c602a75ca
             if(\$(\"#lnum\").val() == 7){
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t'
+           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>'
           );
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 7</h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 7</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>');
               window.localStorage.setItem('score', score);
             }
            
@@ -267,10 +267,10 @@ class __TwigTemplate_fbb3ba765708fd5bd845c8d3668ae17dd7c4d5c5748d7a47a4c602a75ca
             if(\$(\"#lnum\").val() == 7){
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t'
+           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>'
           );
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 7</h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 7</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>');
               window.localStorage.setItem('score', score);
             }
            

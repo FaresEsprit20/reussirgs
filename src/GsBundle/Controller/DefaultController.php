@@ -59,7 +59,6 @@ class DefaultController extends Controller
     {
         $id = $request->get('id');
         $em = $this->getDoctrine()->getManager();
-
         $score = $em->getRepository(Score::class)->find($id);
         $em->remove($score);
         $em->flush();

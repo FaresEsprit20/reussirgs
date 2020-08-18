@@ -147,10 +147,10 @@ class __TwigTemplate_31f5e1df4972453c08edfcf302193fbac09d191b6a1b21b99e1058d9124
             if(\$(\"#lnum\").val() == 12){
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t'
+           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>'
           );
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 12</h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 12</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>');
             }
            
              \$(\"input\").prop(\"disabled\",true);
@@ -261,10 +261,10 @@ class __TwigTemplate_31f5e1df4972453c08edfcf302193fbac09d191b6a1b21b99e1058d9124
             if(\$(\"#lnum\").val() == 12){
               score+=10;
               window.localStorage.setItem('score', score);
-           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t'
+           \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:green\">Bravo!</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +10</h6></div><br>'
           );
             }else{
-              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 12</h2>\t');
+              \$(\"#html\").html('<div class=\"section-tittle text-center\"><h2 style=\"color:red\">Echec! la bonne réponse est 12</h2>\t</div><div class=\"section-tittle text-center\"><h6 style=\"color:blue\">score +0</h6></div><br>');
             }
            
              \$(\"input\").prop(\"disabled\",true);
